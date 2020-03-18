@@ -13,5 +13,11 @@ describe("App", () => {
     expect(locators.length).toBe(1)
   });
 
+  it('renders a header', () => {
+    let mountedStoreLocator = shallow(<App />)
+    const headers = mountedStoreLocator.find('Header')
+    expect(headers.length).toBe(1)
+  })
+
 })
 
